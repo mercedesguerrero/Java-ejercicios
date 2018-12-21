@@ -31,7 +31,7 @@ public class Ejercicio1 {
         System.out.println("Precio: " + Ferrari.CalcularPrecioVehiculo());
         
         System.out.println("----------LAMBORGHINI------------");
-        Lamborghini.setColor(JOptionPane.showInputDialog("Ingrese color: "));
+        Lamborghini.setColor(JOptionPane.showInputDialog("Ingrese color: "));//showInputDialog --> es un método estático, se usa con la clase precediendo
         System.out.println("Color: " + Lamborghini.getColor());
         Lamborghini.MostrarVehiculo();
         Lamborghini.setButacas(JOptionPane.showInputDialog("¿Tiene butacas premium? "));
