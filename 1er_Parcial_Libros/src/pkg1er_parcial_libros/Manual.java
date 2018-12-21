@@ -9,7 +9,7 @@ public class Manual extends Libro{
     
     protected ETipo _tipo;
     
-    public Manual(String titulo, float precio, Autor autor, ETipo tipo)
+    public Manual(ETipo tipo, Autor autor, float precio, String titulo)
     {
         super(titulo, precio, autor);
         this._tipo= tipo;
@@ -20,7 +20,7 @@ public class Manual extends Libro{
         StringBuilder miCadena= new StringBuilder();
         
         miCadena.append(super.Mostrar(this));//Libro.Mostrar(this)
-        miCadena.append("Tipo: ").append(this._tipo);
+        miCadena.append(" || Tipo: ").append(this._tipo);
         
         return miCadena.toString();
     }

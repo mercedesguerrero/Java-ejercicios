@@ -57,7 +57,7 @@ public class Libro {
         StringBuilder miCadena= new StringBuilder();
         
         miCadena.append(" || Titulo: ").append(unLibro._titulo);
-        miCadena.append("Autor: ").append(Autor.Mostrar(unLibro._autor));
+        miCadena.append(" || Autor: ").append(Autor.Mostrar(unLibro._autor));
         miCadena.append(" || Cantidad de paginas: ").append(unLibro.getCant_de_paginas());
         miCadena.append(" || Precio: ").append(unLibro.getPrecio());
         

@@ -31,7 +31,7 @@ public class Biblioteca {
         return _libritos;
     }
     
-    int len= _libritos.size();
+    //int len= _libritos.size();
     
     private boolean EstaEnBiblioteca(Libro unLibro)
     {
@@ -102,12 +102,13 @@ public class Biblioteca {
         return precio_total;
     }
     
-    public String MostrarBiblioteca(Biblioteca unaBiblioteca)
+    public static String MostrarBiblioteca(Biblioteca unaBiblioteca)
     {
         StringBuilder miCadena= new StringBuilder();
         
-        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        miCadena.append(unaBiblioteca._capacidadMaxima);
+        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~").append("\n");
+        miCadena.append("   Capacidad máxima de la Biblioteca: ").append(unaBiblioteca._capacidadMaxima).append("\n");
+        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~").append("\n");
         
         for (Libro miLibrito : unaBiblioteca._libritos)
         {
@@ -121,7 +122,7 @@ public class Biblioteca {
             }
         }
         
-        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~").append("\n");
         miCadena.append("Total manuales: ").append("\n");
         miCadena.append(unaBiblioteca.getPrecio_de_Manuales()).append("\n");
         

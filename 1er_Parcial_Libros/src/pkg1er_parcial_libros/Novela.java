@@ -9,7 +9,7 @@ public class Novela extends Libro{
     
     protected EGenero _genero;
     
-    public Novela(String titulo, float precio, Autor autor, EGenero genero)
+    public Novela(EGenero genero, Autor autor, float precio, String titulo)
     {
         super(titulo, precio, autor);
         this._genero= genero;
@@ -20,7 +20,7 @@ public class Novela extends Libro{
         StringBuilder miCadena= new StringBuilder();
         
         miCadena.append(super.Mostrar(this));
-        miCadena.append("Genero: ").append(this._genero);
+        miCadena.append(" || Genero: ").append(this._genero);
         
         return miCadena.toString();
     }

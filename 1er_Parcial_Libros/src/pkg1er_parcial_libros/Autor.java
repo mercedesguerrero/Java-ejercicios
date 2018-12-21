@@ -10,10 +10,10 @@ public class Autor {
     private String _apellido;
     private String _nombre;
 
-    public Autor(String _apellido, String _nombre) 
+    public Autor(String _nombre, String _apellido) 
     {
-        this._apellido = _apellido;
         this._nombre = _nombre;
+        this._apellido = _apellido;
     }
     
     public String getApellido() {
@@ -41,8 +41,7 @@ public class Autor {
     {
         StringBuilder miCadena= new StringBuilder();
         
-        miCadena.append("Nombre: ").append(autor._nombre);
-        miCadena.append(" || Apellido: ").append(autor._apellido);
+        miCadena.append(autor._apellido).append(" ").append(autor._nombre);
     
         return miCadena.toString();
     }
