@@ -106,12 +106,31 @@ public class Biblioteca {
     {
         StringBuilder miCadena= new StringBuilder();
         
+        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        miCadena.append(unaBiblioteca._capacidadMaxima);
+        
         for (Libro miLibrito : unaBiblioteca._libritos)
         {
-            miCadena.append(miLibrito);
+            if(miLibrito instanceof Manual)
+            {
+                miCadena.append(((Manual) miLibrito).Mostrar()).append("\n");
+            }
+            if(miLibrito instanceof Novela)
+            {
+                miCadena.append(((Novela) miLibrito).Mostrar()).append("\n");
+            }
         }
+        
+        miCadena.append("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        miCadena.append("Total manuales: ").append("\n");
+        miCadena.append(unaBiblioteca.getPrecio_de_Manuales()).append("\n");
+        
+        miCadena.append("Total novelas: ").append("\n");
+        miCadena.append(unaBiblioteca.getPrecio_de_Novelas()).append("\n");
+        
+        miCadena.append("Total: ").append("\n");
+        miCadena.append(unaBiblioteca.getPrecio_total()).append("\n");
         
         return miCadena.toString();
     }
-    
 }
